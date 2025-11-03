@@ -292,13 +292,14 @@ fn rust_arches(linux_arch: &str) -> &[&str] {
         // hexagon gets build errors; disable it for now
         "hexagon" => &[],
         "loongarch" => &["loongarch64"],
+        "m68k" => &["m68k"],
         "mips" => &["mips", "mips64", "mips32r6", "mips64r6"],
         "powerpc" => &["powerpc", "powerpc64"],
         "riscv" => &["riscv32", "riscv64"],
         "s390" => &["s390x"],
         "sparc" => &["sparc", "sparc64"],
         "x86" => &["x86", "x86_64", "x32"],
-        "alpha" | "cris" | "h8300" | "m68k" | "microblaze" | "mn10300" | "score" | "blackfin"
+        "alpha" | "cris" | "h8300" | "microblaze" | "mn10300" | "score" | "blackfin"
         | "frv" | "ia64" | "m32r" | "m68knommu" | "parisc" | "sh" | "um" | "xtensa"
         | "unicore32" | "c6x" | "nios2" | "openrisc" | "arc" | "nds32" | "metag" | "tile" => &[],
         _ => panic!("unrecognized arch: {}", linux_arch),
